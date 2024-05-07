@@ -11,7 +11,7 @@ export default function Chatcontainer() {
       <h1 className="text-lg font-bold md:text-2xl">Chat Name</h1>
 
       <ScrollArea
-        className="p-10 rounded-lg border border-dashed shadow-sm h-[62vh]"
+        className="p-10 rounded-lg border shadow-sm h-[60vh]"
         x-chunk="dashboard-02-chunk-1"
       >
         <div>
@@ -27,7 +27,7 @@ export default function Chatcontainer() {
       </ScrollArea>
 
       <div className="flex gap-4">
-        <Textarea placeholder="Type your message here" />
+        <Textarea placeholder="Type your message here" className="resize-none"/>
         <Button variant="outline" className="rounded-xl">
           <SendHorizonal></SendHorizonal>
         </Button>

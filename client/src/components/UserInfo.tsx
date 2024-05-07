@@ -2,12 +2,10 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuItem,
 } from "./ui/dropdown-menu";
 import { CircleUser } from "lucide-react";
 import { Button } from "./ui/button";
+import ProfileImage from "./ProfileImage";
 
 function User() {
   return (
@@ -18,13 +16,12 @@ function User() {
           <span className="sr-only">Toggle user menu</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Settings</DropdownMenuItem>
-        <DropdownMenuItem>Support</DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Logout</DropdownMenuItem>
+      <DropdownMenuContent align="end" className="flex flex-col items-center aspect-square h-[20rem]">
+        <div className="h-[5rem]">
+          Username
+         <ProfileImage/>
+        </div>
+        <Button variant="destructive">Logout</Button>
       </DropdownMenuContent>
     </DropdownMenu>
   );

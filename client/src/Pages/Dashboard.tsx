@@ -6,10 +6,11 @@ import { MobileNav, Nav } from "@/components/Navbar";
 import { User } from "@/components/UserInfo";
 import { SearchBar } from "@/components/SearchBar";
 import Chatcontainer from "@/components/Chatcontainer";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export default function Dashboard() {
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+    <div className="bg-white dark:bg-slate-800 text-black dark:text-white grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-muted/40 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
@@ -48,6 +49,7 @@ export default function Dashboard() {
             <SearchBar />
           </div>
           <User />
+          <ModeToggle/>
         </header>
         <Chatcontainer />
       </div>
