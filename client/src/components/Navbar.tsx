@@ -1,9 +1,4 @@
-import {
-  Package2,
-  MessageCircleMore,
-  User,
-  Settings,
-} from "lucide-react";
+import { Package2, MessageCircleMore, User, Settings } from "lucide-react";
 import { Badge } from "./ui/badge";
 import {
   Accordion,
@@ -12,6 +7,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { ChatSelector } from "./ChatSelector";
+import { ScrollArea } from "./ui/scroll-area";
 
 function Nav() {
   return (
@@ -27,22 +23,24 @@ function Nav() {
                   6
                 </Badge>
               </AccordionTrigger>
-              <AccordionContent className="h-[70vh] grid gap-1 overflow-y-scroll">
-                <ChatSelector chatTitle="College Group" />
-                <ChatSelector chatTitle="Unofficial College Group" />
-                <ChatSelector chatTitle="Mangalore News" />
-                <ChatSelector chatTitle="School Group" />
-                <ChatSelector chatTitle="Friend new" />
-                <ChatSelector chatTitle="College Group" />
-                <ChatSelector chatTitle="Unofficial College Group" />
-                <ChatSelector chatTitle="Mangalore News" />
-                <ChatSelector chatTitle="College Group" />
-                <ChatSelector chatTitle="Unofficial College Group" />
-                <ChatSelector chatTitle="Mangalore News" />
-                <ChatSelector chatTitle="School Group" />
-                <ChatSelector chatTitle="Friend new" />
-                <ChatSelector chatTitle="School Group" />
-                <ChatSelector chatTitle="Friend new" />
+              <AccordionContent>
+                <ScrollArea className="h-[70vh] grid gap-1 pr-3">
+                  <ChatSelector chatTitle="College Group" />
+                  <ChatSelector chatTitle="Unofficial College Group" />
+                  <ChatSelector chatTitle="Mangalore News" />
+                  <ChatSelector chatTitle="School Group" />
+                  <ChatSelector chatTitle="Friend new" />
+                  <ChatSelector chatTitle="College Group" />
+                  <ChatSelector chatTitle="Unofficial College Group" />
+                  <ChatSelector chatTitle="Mangalore News" />
+                  <ChatSelector chatTitle="College Group" />
+                  <ChatSelector chatTitle="Unofficial College Group" />
+                  <ChatSelector chatTitle="Mangalore News" />
+                  <ChatSelector chatTitle="School Group" />
+                  <ChatSelector chatTitle="Friend new" />
+                  <ChatSelector chatTitle="School Group" />
+                  <ChatSelector chatTitle="Friend new" />
+                </ScrollArea>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

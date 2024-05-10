@@ -1,27 +1,25 @@
 import express from "express";
-import  db from "./SQL/db.config.js";
+import bodyParser from "body-parser";
+import { createTables, dropAll as drop } from "./Model/index.js";
+import { authRoutes } from "./Routes/auth.routes.js";
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 const port = 3000;
+const init = () => {
+  drop();
+  createTables();
+};
 
+// init();
 
-// Example query
-db.none(`CREATE TABLE USER (
-  user_id SERIAL PRIMARY KEY,
-  email VARCHAR(50),
-  username VARCHAR(50),
-  password VARCHAR(100),
-) `)
-  .then((data) => {
-    console.log("Data:", data.value);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+//Routes
+authRoutes();
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log("Listening at localhost:", port);
 });
+
+export { app };

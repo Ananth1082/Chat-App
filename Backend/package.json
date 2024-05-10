@@ -1,18 +1,19 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend for the chat-app",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "nodemon":"nodemon server.js"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "pg": "^8.11.5",
-    "pg-promise": "^11.6.0"
+    "postgres": "^3.4.4"
   }
 }
