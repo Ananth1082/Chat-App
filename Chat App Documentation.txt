@@ -1,0 +1,8 @@
+Backend
+  -Error codes
+    401: Input error undefined values
+    402: Input error invalid format
+    403: Input error ENUM error
+    410: primary key error
+    411: Foreign key error
+

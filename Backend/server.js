@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import { createTables, dropAll as drop } from "./Model/index.js";
 import { authRoutes } from "./Routes/auth.routes.js";
+import { messageRoutes } from "./Routes/message.routes.js";
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,6 +18,7 @@ const init = () => {
 
 //Routes
 authRoutes();
+messageRoutes();
 
 app.listen(port, () => {
   console.log("Listening at localhost:", port);
